@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules
+
+# dist directory
+dist
+
+# test coverage directory
+coverage
+
+# Logs
+logs
+*.log
+npm-debug.log*

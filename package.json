@@ -1,0 +1,77 @@
+{
+  "name": "react-validatus",
+  "version": "0.0.1-beta.0",
+  "description": "A simple to use and light-weight React validator component",
+  "main": "dist/Validatus.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./dev.config.js --mode development --hot --inline --port 3000",
+    "test": "jest",
+    "build": "webpack --mode production --config ./prod.config.js",
+    "prepublish": "rm -rf ./dist && npm run lint && npm run test && npm run build",
+    "stats": "webpack --json > stats.json",
+    "lint": "eslint src/**/*.js examples/**/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "validator",
+    "validation",
+    "validate"
+  ],
+  "author": "John Tsevdos <tsevdosjohn@gmail.com> (http://tsevdos.me)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 15.x"
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.6",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
+    "@babel/preset-env": "7.1.6",
+    "@babel/preset-react": "7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.4",
+    "eslint": "5.9.0",
+    "eslint-plugin-react": "7.11.1",
+    "jest": "23.6.0",
+    "jest-dom": "3.0.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-testing-library": "^5.3.1",
+    "regenerator-runtime": "0.13.1",
+    "webpack": "4.26.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
+  },
+  "dependencies": {
+    "validator": "10.9.0",
+    "prop-types": "15.6.2"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.test.js"
+    ]
+  }
+}

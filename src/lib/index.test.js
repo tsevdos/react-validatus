@@ -1,0 +1,72 @@
+
+import Validations from "./index";
+
+describe("Validations object", () => {
+  it("contains the correct validation methods", () => {
+    expect(Validations.isRequired).toBeDefined();
+    expect(Validations.contains).toBeDefined();
+    expect(Validations.equals).toBeDefined();
+    expect(Validations.isAfter).toBeDefined();
+    expect(Validations.isAlpha).toBeDefined();
+    expect(Validations.isAlphanumeric).toBeDefined();
+    expect(Validations.isAscii).toBeDefined();
+    expect(Validations.isBase64).toBeDefined();
+    expect(Validations.isBefore).toBeDefined();
+    expect(Validations.isBoolean).toBeDefined();
+    expect(Validations.isByteLength).toBeDefined();
+    expect(Validations.isCreditCard).toBeDefined();
+    expect(Validations.isCurrency).toBeDefined();
+    expect(Validations.isDataURI).toBeDefined();
+    expect(Validations.isMagnetURI).toBeDefined();
+    expect(Validations.isDecimal).toBeDefined();
+    expect(Validations.isDivisibleBy).toBeDefined();
+    expect(Validations.isEmail).toBeDefined();
+    expect(Validations.isEmpty).toBeDefined();
+    expect(Validations.isFQDN).toBeDefined();
+    expect(Validations.isFloat).toBeDefined();
+    expect(Validations.isFullWidth).toBeDefined();
+    expect(Validations.isHalfWidth).toBeDefined();
+    expect(Validations.isHash).toBeDefined();
+    expect(Validations.isHexColor).toBeDefined();
+    expect(Validations.isHexadecimal).toBeDefined();
+    expect(Validations.isIdentityCard).toBeDefined();
+    expect(Validations.isIP).toBeDefined();
+    expect(Validations.isIPRange).toBeDefined();
+    expect(Validations.isISBN).toBeDefined();
+    expect(Validations.isISSN).toBeDefined();
+    expect(Validations.isISIN).toBeDefined();
+    expect(Validations.isISO8601).toBeDefined();
+    expect(Validations.isRFC3339).toBeDefined();
+    expect(Validations.isISO31661Alpha2).toBeDefined();
+    expect(Validations.isISO31661Alpha3).toBeDefined();
+    expect(Validations.isISRC).toBeDefined();
+    expect(Validations.isIn).toBeDefined();
+    expect(Validations.isInt).toBeDefined();
+    expect(Validations.isJSON).toBeDefined();
+    expect(Validations.isJWT).toBeDefined();
+    expect(Validations.isLatLong).toBeDefined();
+    expect(Validations.isLength).toBeDefined();
+    expect(Validations.isLowercase).toBeDefined();
+    expect(Validations.isMACAddress).toBeDefined();
+    expect(Validations.isMD5).toBeDefined();
+    expect(Validations.isMimeType).toBeDefined();
+    expect(Validations.isMobilePhone).toBeDefined();
+    expect(Validations.isMongoId).toBeDefined();
+    expect(Validations.isMultibyte).toBeDefined();
+    expect(Validations.isNumeric).toBeDefined();
+    expect(Validations.isPort).toBeDefined();
+    expect(Validations.isPostalCode).toBeDefined();
+    expect(Validations.isSurrogatePair).toBeDefined();
+    expect(Validations.isURL).toBeDefined();
+    expect(Validations.isUUID).toBeDefined();
+    expect(Validations.isUppercase).toBeDefined();
+    expect(Validations.isVariableWidth).toBeDefined();
+    expect(Validations.isWhitelisted).toBeDefined();
+    expect(Validations.matches).toBeDefined();
+  });
+
+  it("contains the correct versions", () => {
+    expect(Validations.version).toBe("0.0.1");
+    expect(Validations["validatorjs-version"]).toBe("10.9.0");
+  });
+});
