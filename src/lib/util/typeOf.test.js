@@ -1,6 +1,6 @@
 import typeOf from "./typeOf";
 
-describe("type: ", () => {
+describe("typeOf", () => {
   it("returns true if input is string", () => {
     expect(typeOf(null)).toBe("null");
     expect(typeOf(undefined)).toBe("undefined");

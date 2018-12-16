@@ -1,6 +1,6 @@
 import assertString from "./assertString";
 
-describe("assertString: ", () => {
+describe("assertString", () => {
   it("returns true if input is string", () => {
     expect(assertString("test")).toBe(true);
     expect(assertString("12")).toBe(true);
