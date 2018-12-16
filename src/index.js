@@ -22,38 +22,23 @@ class Validatus extends Component {
   }
 
   getValidations() {
-    return this.props.validators.map((validator) => this._getValidator(validator));
-  }
-
-  _getValidator(validator) {
-    const { value } = this.props;
-
-    if (typeOf(validator) === "string") {
-      return {
-        [validator]: Validations[validator](value)
-      };
-    }
-
-    if (typeOf(validator) === "object") {
-      const validatorName = Object.keys(validator)[0];
-      const options = Object.values(validator)[0];
-
-      if (options) {
-        return {
-          [validatorName]: Validations[validatorName](value, options),
-          options
-        };
-      }
-    }
+    return this.props.validators.reduce(this.validatorReducer, {});
   }
 
   validateInput(validations) {
-    const validationsResults = validations.map((validation) => {
-      const { _options, ...result } = validation;
-      return Object.values(result)[0];
-    });
+    return Object.values(validations).every((val) => val);
+  }
 
-    return validationsResults.every((val) => val);
+  validatorReducer = (obj, validator) => {
+    const { value } = this.props;
+    const validatorWithoutOptions = typeOf(validator) === "string";
+    const validatorName = validatorWithoutOptions ? validator : Object.keys(validator)[0];
+    const options = !validatorWithoutOptions && Object.values(validator)[0];
+    const validationResult = validatorWithoutOptions
+      ? Validations[validator](value)
+      : Validations[validatorName](value, options);
+
+    return { ...obj,  [validatorName]: validationResult };
   }
 
   render() {
