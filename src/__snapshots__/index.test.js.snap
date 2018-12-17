@@ -1,30 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Validatus renders correctly all the expected elements 1`] = `
-<div>
-  <span>
-    Is valid
-  </span>
-  <span>
-    Is required
-  </span>
-  <span>
-    Has length between 3 and 15
-  </span>
-</div>
-`;
-
-exports[`Validatus renders correctly the expected JSX 1`] = `
-<div>
-  <span>
-    Is email
-  </span>
-  <span>
-    Contains @gmail
-  </span>
-</div>
-`;
-
 exports[`Validatus renders the correct the contents of render prop 1`] = `
 <div>
   <span>
