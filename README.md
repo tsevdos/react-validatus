@@ -14,22 +14,20 @@ npm install --save react-validatus
 ```
 
 ## Usage
-The `Validatus` component requires 2 props in order to work. The first one is the `value` that you want to validate, which **MUST** be of type **string**. The second one are the `validators` you want to apply for the previous `value`. The validators **MUST** be an **array of strings and / or objects**. You can view all the validators (names, options,
-etc.) at the [official documentation of validator.js](https://www.npmjs.com/package/validator#validators). Each validator will validate the `value` prop. With this in mind you can use any of the available validators simply by passing their names as strings (ex. "isEmail"). If you need to pass options to a validator you need to pass an object with the name of the validator as key and its options as value (ex. { isLength: { min:3, max: 10} }).
+The `Validatus` component requires 2 props in order to work. The first one is the `value` that you want to validate, which **MUST** be of type **string**. The second one are the `validators` you want to apply for the previous `value`. The validators **MUST** be an **array of strings and / or objects**. You can view all the validators (names, options, etc.) at the [official documentation of validator.js](https://www.npmjs.com/package/validator#validators). Each validator will validate the `value` prop. With this in mind you can use any of the available validators simply by passing their names as strings (ex. "isEmail"). If you need to pass options to a validator you need to pass an object with the name of the validator as key and its options as the value (ex. { isLength: { min:3, max: 10} }).
 
-Finally, you can render your UI of choice by passing a render function as `children` to the
-`Validatus` component. The specific function provides as argument an **object** with 2 keys. The first one is the `isValid` key that its type is **boolean** and is true only if **ALL** validators are passing (in any other case is false). The second object key `validations`, is an object with key names the applied validators and a **boolean** value for their status (ex. `validations: { isEmail: true, isLength: false}`). If individual validator is passing, the boolean value will be true otherwise will be false.
+Finally, you can render your UI of choice by passing a render function as `children` to the `Validatus` component. The specific function provides as argument an **object** with 2 keys. The first one is the `isValid` key that its type of **boolean** and is true only if **ALL** validators are passing (in any other case is false). The second object key `validations`, is an object with key names the names of the applied validators and values a **boolean** for their status (ex. `validations: { isEmail: true, isLength: false}`). If an individual validator is passing, the boolean value will be true otherwise will be false.
 
 Example:
 
-At the below example the value `email` will be validated with the following validators: **isRequired**, **isEmail**, **contains** and **isLength** (more information for the available validators [here](https://www.npmjs.com/package/validator#validators)). As you can see the last 2 validators have options. The **isValid** key will be true **ONLY** if all validators return true (for example "john@gmail.com"). You can also get individually every validation result from the **validations** object.
+At the below example the value `email` will be validated with the following validators: **isRequired**, **isEmail**, **contains** and **isLength** (read more information about the [available validators](https://www.npmjs.com/package/validator#validators)). As you can see the last 2 validators have options. The **isValid** key will be true **ONLY** if all validators return true. You can also get individually every validation result from the **validations** object.
 
-For more examples please check the `examples` directory.
+For more examples please check the [examples](https://github.com/tsevdos/react-validatus/blob/master/examples/examples.js) directory.
 
 ```js
 import Validatus from "react-validatus";
 
-<Validatus value={email} validators={["isRequired", "isEmail", { contains: "@gmail" }, { isLength: { min:3, max: 15} }]}>
+<Validatus value="john@gmail.com" validators={["isRequired", "isEmail", { contains: "@gmail" }, { isLength: { min:3, max: 15} }]}>
   {
     ({ isValid, validations }) =>
       <div className="form-group">
@@ -55,7 +53,7 @@ import Validatus from "react-validatus";
 
 ## FAQ
 ### I want more examples.
-Sure, have a look into the `examples` directory.
+Sure, have a look into the [examples](https://github.com/tsevdos/react-validatus/blob/master/examples/examples.js) directory.
 
 ### Where can I view **ALL** the available validators with the otpions / documentation?
 [Here](https://www.npmjs.com/package/validator#validators) you can view all the available validators and their the otpions / documentation. Keep in mind that you can use only the validators, not the `sanitizers`.
