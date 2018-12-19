@@ -18,5 +18,5 @@ export default {
   isISO31661Alpha3, isISRC, isIn, isInt, isJSON, isJWT, isLatLong, isLength, isLowercase, isMACAddress,
   isMD5, isMimeType, isMobilePhone,  isMongoId, isMultibyte, isNumeric, isPort, isPostalCode,
   isSurrogatePair, isURL, isUUID, isUppercase, isVariableWidth, isWhitelisted, matches,
-  version: "0.0.1", "validatorjs-version": version
+  "validatorjs-version": version
 };

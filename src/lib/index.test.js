@@ -66,7 +66,6 @@ describe("Validations object", () => {
   });
 
   it("contains the correct versions", () => {
-    expect(Validations.version).toBe("0.0.1");
     expect(Validations["validatorjs-version"]).toBe("10.9.0");
   });
 });
