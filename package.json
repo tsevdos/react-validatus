@@ -16,7 +16,8 @@
     "lint": "eslint src/**/*.js examples/**/*.js",
     "lint:fix": "npm run lint -- --fix",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "preversion": "npm run prepublish"
   },
   "files": [
     "dist",
