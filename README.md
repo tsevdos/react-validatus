@@ -1,6 +1,15 @@
 # react-validatus
 > A simple to use and light-weight React validator component.
 
+
+---
+[![](https://img.shields.io/travis/tsevdos/react-validatus.svg)](https://travis-ci.org/tsevdos/react-validatus)
+[![](https://img.shields.io/david/tsevdos/react-validatus.svg)](https://www.npmjs.com/package/react-validatus)
+[![](https://img.shields.io/bundlephobia/minzip/react-validatus.svg)](https://www.npmjs.com/package/react-validatus)
+[![](https://img.shields.io/npm/l/react-validatus.svg)](https://www.npmjs.com/package/react-validatus)
+---
+
+
 ## The problem
 You need to apply multiple validators on form inputs - and not only - and declaratively render a UI using these rules, by applying CSS classes, displaying custom error messages, etc.
 
